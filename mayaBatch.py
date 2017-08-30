@@ -16,7 +16,7 @@ for files in allFiles:
                        stdout=subprocess.PIPE, stdin-subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
   
   while p.poll() == None:
-    lastoutput = p.communicate()[0]\
+    lastoutput = p.communicate()[0]
     
   if p.returncode == 0:
     print "Successfully completed"
