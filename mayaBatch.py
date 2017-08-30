@@ -12,7 +12,8 @@ for files in os.listdir(source_path):
 #Feed each of the files to maya standalone to execute "mayaTest.py"
 for files in allFiles:
   print 'Processing ' + files
-  p = subprocess.Popen([standalone_path, 'D:\\Vaishak\\Scripts\\mayaTest.py', files], stdout=subprocess.PIPE, stdin-subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+  p = subprocess.Popen([standalone_path, 'D:\\Vaishak\\Scripts\\mayaTest.py', files],
+                       stdout=subprocess.PIPE, stdin-subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
   
   while p.poll() == None:
     lastoutput = p.communicate()[0]\
